@@ -410,7 +410,12 @@ class DataCursor(object):
             formatter._set_format()
             formatter._set_order_of_magnitude()
 
-        return formatter.pprint_val(x)
+	try:
+            # Again, older versions of mpl
+            return formatter.pprint_val(x)
+        except AttributeError:
+            # 3.3.0 or later
+            return formatter.format_data_short(x)
 
     def annotate(self, ax, **kwargs):
         """
