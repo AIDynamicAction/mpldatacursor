@@ -6,7 +6,7 @@ with open(path.join(root_dir, 'README.rst')) as infile:
     long_description = infile.read()
 
 setup(
-    name = 'mpldatacursor',
+    name = 'mpldatacursor-rcognita',
     version = '0.7.1',
     description = "Interactive data cursors for Matplotlib",
     author = 'Joe Kington',
