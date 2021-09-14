@@ -410,7 +410,7 @@ class DataCursor(object):
             formatter._set_format()
             formatter._set_order_of_magnitude()
 
-	try:
+        try:
             # Again, older versions of mpl
             return formatter.pprint_val(x)
         except AttributeError:
